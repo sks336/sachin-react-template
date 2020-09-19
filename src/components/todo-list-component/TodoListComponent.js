@@ -6,31 +6,63 @@ const TodoListComponent = () => {
   const items = [
     { name: "Pen", checked: false },
     { name: "Pencil", checked: false },
-    { name: "Black Board", checked: false },
-    { name: "Slate", checked: false },
+    { name: "Book", checked: false }
   ];
 
-  const [itemsState, setItemsState] = useState({'items': items});
+  const [itemsState, setItemsState] = useState({ items: items });
+  const [itemValueState, setItemValueState] = useState("");
 
   function onClickHandler(index, checked) {
-    let itemsCopy = [...itemsState.items]
-    itemsCopy[index].checked = checked
+    let itemsCopy = [...itemsState.items];
+    itemsCopy[index].checked = checked;
 
-    setItemsState( (s) => {
-      return {...s, items:itemsCopy}
-    }); 
+    setItemsState((s) => {
+      return { ...s, items: itemsCopy };
+    });
 
     var checkStrStatus = checked ? "Checked" : "Un-Checked";
-    alert('{'+itemsCopy[index].name+'} '+checkStrStatus+' Successfully!!!!');
+    alert(
+      "{" + itemsCopy[index].name + "} " + checkStrStatus + " Successfully!!!!"
+    );
+  }
+
+  function addTodoItem(itemName) {
+    var itemCopy = [...itemsState.items];
+    var item = { name: "", checked: false };
+    item.name = itemName;
+    itemCopy.push(item);
+
+    setItemsState((s) => {
+      return { ...s, items: itemCopy };
+    });
   }
 
   return (
     <div>
-      <ul>      
+      <label>Enter the Item: </label>
+      <input
+        value={itemValueState}
+        onChange={(e) => {
+          setItemValueState(e.target.value);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            addTodoItem(itemValueState);
+            setItemValueState("");
+          }
+        }}
+      />
 
+      <ul>
         {itemsState.items.map((k, i) => {
-          //console.log('Okay - ' + JSON.stringify(k))
-          return <ItemComponent onClickHandler={onClickHandler} name={k.name} indexVal={i} checked={k.checked}/>;
+          return (
+            <ItemComponent
+              onClickHandler={onClickHandler}
+              name={k.name}
+              indexVal={i}
+              checked={k.checked}
+            />
+          );
         })}
       </ul>
     </div>

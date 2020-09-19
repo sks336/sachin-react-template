@@ -6,7 +6,9 @@ import TodoListComponent from "./components/todo-list-component/TodoListComponen
 function App() {
   return (
     <div className="App">
+      <br />
       <TodoListComponent />
+      <br />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
