@@ -2,12 +2,19 @@ import React, { useState } from "react";
 
 import ItemComponent from "../item-component";
 
+
+function getToDoItemsArr(items) {
+  var returnItems = [];
+  items.forEach(element => {
+    var obj = {name:'', checked: false}
+    obj.name=element;
+    returnItems.push(obj);
+  });
+  return returnItems;  
+}
+
 const TodoListComponent = () => {
-  const items = [
-    { name: "Pen", checked: false },
-    { name: "Pencil", checked: false },
-    { name: "Book", checked: false }
-  ];
+  const items = getToDoItemsArr(["Pen", "Pencil", "Note Book"]);
 
   const [itemsState, setItemsState] = useState({ items: items });
   const [itemValueState, setItemValueState] = useState("");
@@ -28,9 +35,7 @@ const TodoListComponent = () => {
 
   function addTodoItem(itemName) {
     var itemCopy = [...itemsState.items];
-    var item = { name: "", checked: false };
-    item.name = itemName;
-    itemCopy.push(item);
+    itemCopy.push(getToDoItemsArr([itemName])[0]);
 
     setItemsState((s) => {
       return { ...s, items: itemCopy };
