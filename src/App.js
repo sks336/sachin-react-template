@@ -2,9 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ItemComponent from './components/item-component'
+
 function App() {
   return (
     <div className="App">
+      <ItemComponent name="Sachin" />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
