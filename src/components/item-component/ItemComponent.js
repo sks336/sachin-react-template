@@ -1,8 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const ItemComponent = (props) => {
-
-    return <h2>Hello!! {props.name}</h2>
-}
+  return (
+    <li key="1">
+      <input type="checkbox" value="sachin"></input>
+      <label>{props.name}</label>
+    </li>
+  );
+};
 
 export default ItemComponent;

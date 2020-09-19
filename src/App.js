@@ -1,13 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-import ItemComponent from './components/item-component'
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import TodoListComponent from "./components/todo-list-component/TodoListComponent";
 
 function App() {
   return (
     <div className="App">
-      <ItemComponent name="Sachin" />
+      <TodoListComponent />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

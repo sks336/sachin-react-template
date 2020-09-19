@@ -1,3 +1,3 @@
-import React from 'react'
-import ItemComponent from './ItemComponent'
-export default ItemComponent
+import React from "react";
+import ItemComponent from "./ItemComponent";
+export default ItemComponent;
