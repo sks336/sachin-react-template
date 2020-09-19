@@ -13,34 +13,40 @@ function usage()
 #    exit 1 # Exit script after printing help
 }
 
-while getopts "c:i:s:" opt
+c_flag='false'
+i_flag='false'
+s_flag='false'
+
+while getopts "cis" opt
 do
    case "$opt" in      
-      c ) c="$OPTARG" ;;
-      i ) i="$OPTARG" ;;
-      s ) s="$OPTARG" ;;
+      c ) c_flag='true' ;;
+      i ) i_flag='true' ;;
+      s ) s_flag='true' ;;
    esac
 done
 
-echo "value is: c {$c}, i {$i}, s {$s}"
+echo "Value is: c {$c_flag}, i {$i_flag}, s {$s_flag}"
 
-if [[ -z $c && -z $i && -z $s ]]; then    
-    echo "At least on of the argument must be there..."  ;  
-    usage;
-    exit;
+if [[ "$c_flag" == 'false' && "$i_flag" == 'false' && "$s_flag" == false ]]; then
+    echo "All flags are falsed and hence default switching to start flag on!!"
+    s_flag='true'
 fi
-if [[ ! -z $c ]]; then
+
+if [[ "$c_flag" == 'true' ]]; then
     echo "Going to delete the directory: ${PROJ_DIR}/node_modules"
     rm -rf ${PROJ_DIR}/node_modules
     echo "Directory deleted!!!"
 fi
 
-if [[ ! -z $i ]]; then
+if [[ "$i_flag" == 'true' ]]; then
+    echo 'Going to install the modules.'
     cd $PROJ_DIR
     npm install    
 fi
 
-if [[ ! -z $s ]]; then 
+if [[ "$s_flag" == 'true' ]]; then 
+    echo 'Going to start the server.'
     cd $PROJ_DIR
     npm start
 fi

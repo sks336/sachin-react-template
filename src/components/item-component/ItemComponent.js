@@ -1,4 +1,5 @@
 import React from "react";
+import "./ItemComponent.scss";
 
 const ItemComponent = (props) => {
   return (
@@ -10,7 +11,9 @@ const ItemComponent = (props) => {
           props.onClickHandler(props.indexVal, !props.checked);
         }}
       ></input>
-      <label>{props.name}</label>
+      <label className={props.checked ? "strikeThrough" : ""}>
+        {props.name}
+      </label>
     </li>
   );
 };

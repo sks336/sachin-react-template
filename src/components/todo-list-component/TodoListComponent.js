@@ -1,16 +1,16 @@
 import React, { useState } from "react";
+// import { Text, StyleSheet } from "react-native";
 
 import ItemComponent from "../item-component";
 
-
 function getToDoItemsArr(items) {
   var returnItems = [];
-  items.forEach(element => {
-    var obj = {name:'', checked: false}
-    obj.name=element;
+  items.forEach((element) => {
+    var obj = { name: "", checked: false };
+    obj.name = element;
     returnItems.push(obj);
   });
-  return returnItems;  
+  return returnItems;
 }
 
 const TodoListComponent = () => {
@@ -28,9 +28,9 @@ const TodoListComponent = () => {
     });
 
     var checkStrStatus = checked ? "Checked" : "Un-Checked";
-    alert(
-      "{" + itemsCopy[index].name + "} " + checkStrStatus + " Successfully!!!!"
-    );
+    // alert(
+    //   "{" + itemsCopy[index].name + "} " + checkStrStatus + " Successfully!!!!"
+    // );
   }
 
   function addTodoItem(itemName) {
@@ -44,6 +44,8 @@ const TodoListComponent = () => {
 
   return (
     <div>
+      {/* <Text style={{ textDecorationLine: 'line-through' }}>Strike through text</Text> */}
+
       <label>Enter the Item: </label>
       <input
         value={itemValueState}

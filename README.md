@@ -20,11 +20,13 @@ npm install --save-dev --save-exact prettier
 
 ```
 npx prettier --write .
-    
+
 ```
-Or Use the Util script as 
+
+Or Use the Util script as
 
 ```
 ./scripts/util/format-prettier.sh
 ```
+
 ---
