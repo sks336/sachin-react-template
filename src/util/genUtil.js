@@ -1,6 +1,6 @@
-function getSampleColumn(name, title, type) {
+function getSampleColumn(key, title, type) {
   var obj = {};
-  obj.name = name;
+  obj.name = key;
   obj.title = title;
   obj.type = type;
   return obj;

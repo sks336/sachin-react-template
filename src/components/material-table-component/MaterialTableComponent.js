@@ -9,11 +9,11 @@ import {
 } from "@devexpress/dx-react-grid-material-ui";
 
 export default () => {
-  const [dataState, setDataState] = useState(generateSampleData(100));
+  const [dataState, setDataState] = useState(generateSampleData(10));
 
   return (
     <Paper>
-      <Grid rows={dataState.rows} columns={dataState.columns}>
+      <Grid rows={dataState.rows} columns={dataState.columns} >
         <Table />
         <TableHeaderRow />
       </Grid>

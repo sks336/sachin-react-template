@@ -1,9 +1,19 @@
 import MaterialTableComponent from "./MaterialTableComponent";
-import MaterialTableComponent2_CustomizeTable from "./MaterialTableComponent2_CustomizeTable";
-import MaterialTableComponent3_HighLightedCells from "./MaterialTableComponent3_HighLightedCells";
+import MaterialTableComponent2_customizeTable from "./MaterialTableComponent2_customizeTable";
+import MaterialTableComponent3_cellComponent from "././MaterialTableComponent3_cellComponent";
+import MaterialTableComponent4_rowComponent from "./MaterialTableComponent4_rowComponent";
+import MaterialTableComponent5_contentComponent from "./MaterialTableComponent5_contentComponent";
+import MaterialTableComponent6_controlledComponent from "./MaterialTableComponent6_controlledComponent";
+import MaterialTableComponent7_partiallyControlledComponent from "./MaterialTableComponent7_partiallyControlledComponent";
+import MaterialTableComponent8_editColumnStateComponent from "./MaterialTableComponent8_editColumnStateComponent";
 
 export {
   MaterialTableComponent,
-  MaterialTableComponent2_CustomizeTable,
-  MaterialTableComponent3_HighLightedCells,
+  MaterialTableComponent2_customizeTable,
+  MaterialTableComponent3_cellComponent,
+  MaterialTableComponent4_rowComponent,
+  MaterialTableComponent5_contentComponent,
+  MaterialTableComponent6_controlledComponent,
+  MaterialTableComponent7_partiallyControlledComponent,
+  MaterialTableComponent8_editColumnStateComponent,
 };

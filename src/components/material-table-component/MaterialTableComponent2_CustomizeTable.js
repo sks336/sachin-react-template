@@ -21,12 +21,12 @@ const TableComponentBase = ({ classes, ...restProps }) => (
   <Table.Table {...restProps} className={classes.tableStriped} />
 );
 
-export const TableComponent = withStyles(styles, { name: "TableComponent" })(
-  TableComponentBase
-);
+export const TableComponent = withStyles(styles, {
+  name: "TableComponent_Name_Does_Not_Matter",
+})(TableComponentBase);
 
 export default () => {
-  const [dataState, setDataState] = useState(generateSampleData(50));
+  const [dataState, setDataState] = useState(generateSampleData(10));
 
   return (
     <Paper>

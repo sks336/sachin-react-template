@@ -12,20 +12,32 @@ const HighlightedCell = ({ value, style, ...restProps }) => (
   <Table.Cell
     {...restProps}
     style={{
-      backgroundColor: value == "email-7" ? "red" : (value == "email-9" ? "lightblue": undefined),
+      backgroundColor:
+        value == "email-7"
+          ? "red"
+          : value == "email-9"
+          ? "lightblue"
+          : undefined,
+
       ...style,
     }}
   >
     <span
       style={{
-        color: value < 5000 ? "white" : undefined,
+        color:
+          value == "email-7"
+            ? "green"
+            : value == "email-9"
+            ? "yellow"
+            : undefined,
+        fontWeight:
+          value == "email-7" || value == "email-9" ? "bold" : undefined,
       }}
     >
       {value}
     </span>
   </Table.Cell>
 );
-
 const Cell = (props) => {
   const { column } = props;
   if (column.name === "email") {
@@ -35,7 +47,7 @@ const Cell = (props) => {
 };
 
 export default () => {
-  const [dataState, setDataState] = useState(generateSampleData(50));
+  const [dataState, setDataState] = useState(generateSampleData(10));
 
   return (
     <Paper>
