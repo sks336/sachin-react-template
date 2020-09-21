@@ -23,7 +23,7 @@ import {
   EditingState,
 } from "@devexpress/dx-react-grid";
 
-import { generateSampleData } from "../../util/genUtil";
+import { generateSampleData, generateSampleDataRange } from "../../util/genUtil";
 
 const styles = (theme) => ({
   button: {
@@ -56,7 +56,7 @@ export const TableHeaderContent = withStyles(styles, {
 })(TableHeaderContentBase);
 
 export default () => {
-  const [dataState, setDataState] = useState(generateSampleData(10));
+  const [dataState, setDataState] = useState(generateSampleDataRange(10, 30));
   const [editingColumnExtensions] = useState([
     {
       columnName: "id",
@@ -108,7 +108,7 @@ export default () => {
   return (
     <div>
       <Paper>
-        <Grid rows={dataState.rows} columns={dataState.columns} getRowId={ (r) => r.id}>
+        <Grid rows={dataState.rows} columns={dataState.columns} getRowId={ (r) => r.id} >
           <EditingState
             columnExtensions={editingColumnExtensions}
             onCommitChanges={commitChanges}
@@ -116,9 +116,15 @@ export default () => {
           <Table />
           <TableHeaderRow />
           <TableEditRow />
+          {/* <TableSelection showSelectAll /> */}
           <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
         </Grid>
       </Paper>
     </div>
   );
 };
+
+
+
+
+

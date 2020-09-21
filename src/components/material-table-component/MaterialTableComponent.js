@@ -12,11 +12,14 @@ export default () => {
   const [dataState, setDataState] = useState(generateSampleData(10));
 
   return (
+    <div>
+    {/* <h2>ok</h2> */}
     <Paper>
       <Grid rows={dataState.rows} columns={dataState.columns} >
         <Table />
         <TableHeaderRow />
       </Grid>
     </Paper>
+    </div>
   );
 };
