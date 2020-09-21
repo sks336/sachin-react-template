@@ -6,6 +6,7 @@ import MaterialTableComponent5_contentComponent from "./MaterialTableComponent5_
 import MaterialTableComponent6_controlledComponent from "./MaterialTableComponent6_controlledComponent";
 import MaterialTableComponent7_partiallyControlledComponent from "./MaterialTableComponent7_partiallyControlledComponent";
 import MaterialTableComponent8_editColumnStateComponent from "./MaterialTableComponent8_editColumnStateComponent";
+import MaterialTableComponent9_infiniteScroll from "./MaterialTableComponent9_infiniteScroll";
 
 export {
   MaterialTableComponent,
@@ -16,4 +17,5 @@ export {
   MaterialTableComponent6_controlledComponent,
   MaterialTableComponent7_partiallyControlledComponent,
   MaterialTableComponent8_editColumnStateComponent,
+  MaterialTableComponent9_infiniteScroll,
 };

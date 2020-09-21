@@ -13,6 +13,7 @@ import {
   MaterialTableComponent6_controlledComponent,
   MaterialTableComponent7_partiallyControlledComponent,
   MaterialTableComponent8_editColumnStateComponent,
+  MaterialTableComponent9_infiniteScroll,
 } from "./components/material-table-component";
 import AppRouters from "./routers";
 
@@ -30,7 +31,7 @@ function App() {
       {/* <MaterialTableComponent6_controlledComponent /> */}
       {/* <MaterialTableComponent7_partiallyControlledComponent /> */}
       {/* <MaterialTableComponent8_editColumnStateComponent /> */}
-      {/* {disPlayLogo && <DisplayLogoFn />} */}
+      {/* {disPlayLogo && <DisplayLogoFn />} */}      
     </div>
   );
 }
