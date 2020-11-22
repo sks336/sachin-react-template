@@ -13,6 +13,7 @@ import "./App.css";
 import TodoListComponent from "./components/todo-list-component/TodoListComponent";
 import TextBoxComponent from "./components/textBox-component";
 import TextBoxWithReduxComponent from "./components/textBoxWithRedux-component";
+import LearnCSSComponent from "./components/learnCSS-component";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             <li>
               <Link to="/textboxWithRedux">Text Box (Redux)</Link>
             </li>
+            <li>
+              <Link to="/learnCSSComponent">Learn CSS Component</Link>
+            </li>
           </ul>
 
           <Switch>
@@ -43,11 +47,14 @@ function App() {
             <Route path="/textboxWithRedux">
               <TextBoxWithReduxComponent />
             </Route>
+            <Route path="/learnCSSComponent">
+              <LearnCSSComponent />
+            </Route>
           </Switch>
         </div>
       </Router>
 
-      <br></br>
+      {/* <br></br>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -61,7 +68,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
