@@ -24,3 +24,6 @@ yarn-error.log*
 package-lock.json
 .vscode/settings.json
 vscode/*
+
+src/components/learnCSS-component/LearnCSSComponent.css
+src/components/learnCSS-component/LearnCSSComponent.css.map

@@ -1,3 +1,52 @@
-.sampleClass {
+p {
+    background-color: magenta;
+}
+
+.sampleClass:hover {
     background-color: blueviolet;
+}
+
+#learncss-para-1:hover {
+    background-color: red;
+}
+
+
+.listOne > li:first-child {
+    color:green;
+    font-weight: bold;
+}
+.listOne > li:last-child {
+    color:purple;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: xx-large
+}
+
+.listTwo > li:nth-child(3) {
+    color:teal;
+    font-size: xx-large
+}
+
+#google-link:link {
+    color: blue;
+    font-weight: bold;
+}
+
+#google-link:visited {
+    color: red;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+
+.descendentSelectorConcept .listOne ul > li { //This is direct descendent of its parent
+    color: coral;
+}
+// .descendentSelectorConcept .listOne ol > li { //This is direct descendent of its parent
+//     color: green;
+// }
+.descendentSelectorConcept .listTwo ul li { //This works for direct or indirect descendent of its parent in the chain
+    color: magenta;
 }
