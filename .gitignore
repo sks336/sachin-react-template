@@ -25,5 +25,5 @@ package-lock.json
 .vscode/settings.json
 vscode/*
 
-src/components/learnCSS-component/LearnCSSComponent.css
-src/components/learnCSS-component/LearnCSSComponent.css.map
+src/**/*.css
+src/**/*.css.map
